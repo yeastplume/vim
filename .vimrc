@@ -11,6 +11,14 @@ nnoremap <F6> :call GlobalSearch()<CR>
 inoremap jk <ESC>
 let mapleader = "\<Space>"
 
+"nnoremap <C-J> <C-W><C-J>
+"nnoremap <C-K> <C-W><C-K>
+"nnoremap <C-L> <C-W><C-L>
+"nnoremap <C-H> <C-W><C-H>
+
+set splitbelow
+set splitright
+
 filetype plugin indent on
 syntax on
 
