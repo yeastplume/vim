@@ -24,6 +24,7 @@ let mapleader = "\<Space>"
 "set compiler to cargo for now
 :compiler cargo
 :nnoremap <leader>mb :make build<cr>
+:nnoremap <leader>mt :make test<cr>
 
 "nnoremap <C-J> <C-W><C-J>
 "nnoremap <C-K> <C-W><C-K>
@@ -52,7 +53,7 @@ let g:syntastic_check_on_open = 0
 let g:syntastic_check_on_wq = 0 
 let g:syntastic_rust_checkers=['rustc']
 
-let g:syntastic_rust_rustc_exe = 'cargo check'
+let g:syntastic_rust_rustc_exe = 'cargo check --tests'
 let g:syntastic_rust_rustc_fname = ''
 let g:syntastic_rust_rustc_args = '--'
 "let g:syntastic_debug = 1
