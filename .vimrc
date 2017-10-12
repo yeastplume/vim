@@ -10,7 +10,7 @@ nnoremap <F6> :call GlobalSearch()<CR>
 
 set tabstop=2 shiftwidth=2 softtabstop=2
 set autoindent
-
+set backspace=indent,eol,start
 set list
 set listchars=tab:!·,trail:·
 
@@ -59,7 +59,7 @@ let g:syntastic_rust_rustc_args = '--'
 "let g:syntastic_debug = 1
 "let g:syntastic_debug_file = "~/syntastic.log" 
 
-let g:ycm_rust_src_path="/home/mcordner/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src"
-let g:ycm_global_ycm_extra_conf = '/home/mcordner/.vim/pack/yeastplume/start/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
+let g:ycm_rust_src_path="/Users/mcordner/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src"
+let g:ycm_global_ycm_extra_conf = '/Users/mcordner/.vim/pack/yeastplume/start/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
 nnoremap <Leader>gd :YcmCompleter GoTo<CR>
 
