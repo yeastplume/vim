@@ -22,3 +22,7 @@
 [submodule "tmux-plugins/tmux-resurrect"]
 	path = tmux-plugins/tmux-resurrect
 	url = https://github.com/tmux-plugins/tmux-resurrect
+[submodule "pack/yeastplume/start/YouCompleteMe"]
+	path = pack/yeastplume/start/YouCompleteMe
+	url = https://github.com/Valloric/YouCompleteMe.git
+	branch = master
