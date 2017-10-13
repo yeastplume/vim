@@ -1,7 +1,6 @@
 function! GlobalSearch()
     call inputsave()
     let replacement = input('Search in files: ')
-    call inputrestore()
     execute ':vimgrep/'.replacement.'/gj **/*.rs'
     execute ':cw'
 endfunction
@@ -10,7 +9,7 @@ nnoremap <F6> :call GlobalSearch()<CR>
 
 set tabstop=2 shiftwidth=2 softtabstop=2
 set autoindent
-set backspace=indent,eol,start
+set backspace=eol,start
 set list
 set listchars=tab:!·,trail:·
 
@@ -22,7 +21,7 @@ let mapleader = "\<Space>"
 :nnoremap <leader>sv :source $MYVIMRC<cr>
 
 "build and test commands
-filetype plugin indent on
+"filetype plugin on
 :autocmd Filetype rust compiler cargo
 :autocmd Filetype cpp compiler cargo
 :autocmd Filetype c compiler cargo
@@ -53,6 +52,9 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 0
 let g:syntastic_check_on_wq = 0 
+let g:syntastic_mode_map = {
+    \ "mode": "active",
+    \ "passive_filetypes": ["cpp","c"] }
 
 "syntastic rust
 let g:syntastic_rust_checkers=['rustc', 'cargo']
@@ -61,13 +63,14 @@ let g:syntastic_rust_rustc_fname = ''
 let g:syntastic_rust_rustc_args = '--'
 
 "syntastic gcc
-"let g:syntastic_cpp_checkers=['gcc']
-"let g:syntastic_cpp_compiler_options = ' -std=c++0x'
+let g:syntastic_cpp_checkers=['gcc']
+let g:syntastic_cpp_compiler_options = ' -std=c++0x'
 
 "let g:syntastic_debug = 1
 "let g:syntastic_debug_file = "~/syntastic.log" 
 
-let g:ycm_rust_src_path="~/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src"
-let g:ycm_global_ycm_extra_conf = '~/.vim/pack/yeastplume/start/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
+let g:ycm_filetype_blacklist = { 'cpp': 1, 'c':1 }
+let g:ycm_rust_src_path="~/.rustup/toolchains/stable-x86_64-apple-darwin/lib/rustlib/src"
+"let g:ycm_global_ycm_extra_conf = '~/.vim/pack/yeastplume/start/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
 nnoremap <Leader>gd :YcmCompleter GoTo<CR>
 
