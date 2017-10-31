@@ -25,6 +25,8 @@ let mapleader = "\<Space>"
 :autocmd Filetype rust compiler cargo
 :autocmd Filetype cpp compiler cargo
 :autocmd Filetype c compiler cargo
+:autocmd Filetype yaml set expandtab
+:autocmd Filetype rust set noexpandtab
 :nnoremap <leader>mb :make build<cr>
 :nnoremap <leader>mt :make test<cr>
 
@@ -70,7 +72,7 @@ let g:syntastic_cpp_compiler_options = ' -std=c++0x'
 "let g:syntastic_debug_file = "~/syntastic.log" 
 
 let g:ycm_filetype_blacklist = { 'cpp': 1, 'c':1 }
-let g:ycm_rust_src_path="~/.rustup/toolchains/stable-x86_64-apple-darwin/lib/rustlib/src"
+let g:ycm_rust_src_path="~/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src"
 "let g:ycm_global_ycm_extra_conf = '~/.vim/pack/yeastplume/start/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
 nnoremap <Leader>gd :YcmCompleter GoTo<CR>
 
