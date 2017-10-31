@@ -21,12 +21,13 @@ let mapleader = "\<Space>"
 :nnoremap <leader>sv :source $MYVIMRC<cr>
 
 "build and test commands
-"filetype plugin on
+filetype plugin on
 :autocmd Filetype rust compiler cargo
 :autocmd Filetype cpp compiler cargo
 :autocmd Filetype c compiler cargo
 :autocmd Filetype yaml set expandtab
 :autocmd Filetype rust set noexpandtab
+":autocmd Filetype javascript compiler npm
 :nnoremap <leader>mb :make build<cr>
 :nnoremap <leader>mt :make test<cr>
 
@@ -67,6 +68,10 @@ let g:syntastic_rust_rustc_args = '--'
 "syntastic gcc
 let g:syntastic_cpp_checkers=['gcc']
 let g:syntastic_cpp_compiler_options = ' -std=c++0x'
+
+"syntastic javascript
+let g:syntastic_javascript_checkers = ['eslint']
+let g:syntastic_javascript_eslint_exe = 'npm run lint --'
 
 "let g:syntastic_debug = 1
 "let g:syntastic_debug_file = "~/syntastic.log" 

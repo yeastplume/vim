@@ -26,3 +26,6 @@
 	path = pack/yeastplume/start/YouCompleteMe
 	url = https://github.com/Valloric/YouCompleteMe.git
 	branch = master
+[submodule "pack/yeastplume/start/tern_for_vim"]
+	path = pack/yeastplume/start/tern_for_vim
+	url = https://github.com/ternjs/tern_for_vim.git
