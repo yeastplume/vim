@@ -7,6 +7,7 @@ endfunction
 
 nnoremap <F6> :call GlobalSearch()<CR>
 
+filetype plugin on
 set tabstop=2 shiftwidth=2 softtabstop=2
 set autoindent
 set backspace=eol,start
@@ -21,12 +22,12 @@ let mapleader = "\<Space>"
 :nnoremap <leader>sv :source $MYVIMRC<cr>
 
 "build and test commands
-filetype plugin on
 :autocmd Filetype rust compiler cargo
 :autocmd Filetype cpp compiler cargo
 :autocmd Filetype c compiler cargo
 :autocmd Filetype yaml set expandtab
 :autocmd Filetype rust set noexpandtab
+:autocmd Filetype rust set tabstop=2 shiftwidth=2 softtabstop=2
 ":autocmd Filetype javascript compiler npm
 :nnoremap <leader>mb :make build<cr>
 :nnoremap <leader>mt :make test<cr>
