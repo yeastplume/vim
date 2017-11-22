@@ -1,12 +1,3 @@
-function! GlobalSearch()
-    call inputsave()
-    let replacement = input('Search in files: ')
-    execute ':vimgrep/'.replacement.'/gj **/*.rs'
-    execute ':cw'
-endfunction
-
-nnoremap <F6> :call GlobalSearch()<CR>
-
 filetype plugin on
 set tabstop=2 shiftwidth=2 softtabstop=2
 set autoindent
@@ -47,6 +38,8 @@ set encoding=utf-8
 :nnoremap <leader>nt :NERDTree<CR>
 
 :nnoremap <F5> :buffers<CR>:buffer<Space>
+:nnoremap <leader>cc :cclose<CR>
+:nnoremap <leader>lc :lclose<CR>
 
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
@@ -85,4 +78,8 @@ nnoremap <Leader>gd :YcmCompleter GoTo<CR>
 "silver seracher
 if executable('ag')
   let g:ackprg = 'ag --vimgrep'
-endif"
+endif
+
+
+" bind \ (backward slash) to grep shortcut
+nnoremap <Leader>ag :Ack!<SPACE>
