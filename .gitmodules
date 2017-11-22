@@ -29,3 +29,6 @@
 [submodule "pack/yeastplume/start/tern_for_vim"]
 	path = pack/yeastplume/start/tern_for_vim
 	url = https://github.com/ternjs/tern_for_vim.git
+[submodule "pack/yeastplume/start/ack.vim"]
+	path = pack/yeastplume/start/ack.vim
+	url = https://github.com/mileszs/ack.vim

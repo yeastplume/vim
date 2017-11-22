@@ -82,3 +82,7 @@ let g:ycm_rust_src_path="~/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/li
 "let g:ycm_global_ycm_extra_conf = '~/.vim/pack/yeastplume/start/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
 nnoremap <Leader>gd :YcmCompleter GoTo<CR>
 
+"silver seracher
+if executable('ag')
+  let g:ackprg = 'ag --vimgrep'
+endif"
