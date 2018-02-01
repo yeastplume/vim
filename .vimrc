@@ -40,13 +40,14 @@ set encoding=utf-8
 :nnoremap <F5> :buffers<CR>:buffer<Space>
 :nnoremap <leader>cc :cclose<CR>
 :nnoremap <leader>lc :lclose<CR>
+:nnoremap <leader>lo :lopen<CR>
 
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
 let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
+let g:syntastic_auto_loc_list = 0
 let g:syntastic_check_on_open = 0
 let g:syntastic_check_on_wq = 0
 let g:syntastic_mode_map = {
@@ -56,6 +57,7 @@ let g:syntastic_mode_map = {
 "syntastic rust
 let g:syntastic_rust_checkers=['rustc', 'cargo']
 let g:syntastic_rust_rustc_exe = 'cargo check --tests'
+"let g:syntastic_rust_rustc_exe = 'cargo test'
 let g:syntastic_rust_rustc_fname = ''
 let g:syntastic_rust_rustc_args = '--'
 
