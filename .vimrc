@@ -12,6 +12,15 @@ let mapleader = "\<Space>"
 :nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 :nnoremap <leader>sv :source $MYVIMRC<cr>
 
+"tab mappings
+:nnoremap <leader>n :tabp<cr>
+:nnoremap <leader>m :tabn<cr>
+:nnoremap <leader>1 :tabr<cr>
+
+augroup filetypedetect
+	au BufNewFile,BufRead *.s set ft=asm_ca65
+augroup end
+
 "build and test commands
 :autocmd Filetype rust compiler cargo
 :autocmd Filetype cpp compiler cargo
@@ -56,8 +65,12 @@ let g:syntastic_mode_map = {
 
 "syntastic rust
 let g:syntastic_rust_checkers=['rustc', 'cargo']
-let g:syntastic_rust_rustc_exe = 'cargo check --tests'
+let g:syntastic_rust_rustc_exe = 'cargo check --all --all-targets'
 "let g:syntastic_rust_rustc_exe = 'cargo test'
+
+"let g:syntastic_rust_checkers=['cargo', 'rustc']
+"let g:syntastic_rust_rustc_exe = 'cargo test'
+
 let g:syntastic_rust_rustc_fname = ''
 let g:syntastic_rust_rustc_args = '--'
 
