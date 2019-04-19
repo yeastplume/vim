@@ -4,9 +4,6 @@
 [submodule "pack/yeastplume/start/syntastic"]
 	path = pack/yeastplume/start/syntastic
 	url = https://github.com/vim-syntastic/syntastic.git
-[submodule "pack/yeastplume/start/rust.vim"]
-	path = pack/yeastplume/start/rust.vim
-	url = https://github.com/rust-lang/rust.vim.git
 [submodule "pack/yeastplume/start/vim-airline"]
 	path = pack/yeastplume/start/vim-airline
 	url = https://github.com/vim-airline/vim-airline.git
