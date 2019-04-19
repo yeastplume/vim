@@ -29,3 +29,6 @@
 [submodule "pack/yeastplume/start/ack.vim"]
 	path = pack/yeastplume/start/ack.vim
 	url = https://github.com/mileszs/ack.vim
+[submodule "pack/yeastplume/start/rust.vim"]
+	path = pack/yeastplume/start/rust.vim
+	url = https://github.com/rust-lang/rust.vim.git
