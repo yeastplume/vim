@@ -32,3 +32,6 @@
 [submodule "pack/yeastplume/start/rust.vim"]
 	path = pack/yeastplume/start/rust.vim
 	url = https://github.com/rust-lang/rust.vim.git
+[submodule "tmux-plugins/tmux-continuum"]
+	path = tmux-plugins/tmux-continuum
+	url = https://github.com/tmux-plugins/tmux-continuum.git
